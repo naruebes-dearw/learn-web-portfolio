@@ -60,10 +60,10 @@ const Contact = () => {
             <b>What's your story</b> Get in touch. Always available for freelancing if the right project comes along. me.
           </p>
           <form ref={formRef} onSubmit={handleSubmit}>
-            <input style={{ backgroundColor: darkMode && "#333" }} type="text" placeholder="Name" name="user_name" />
-            <input style={{ backgroundColor: darkMode && "#333" }} type="text" placeholder="Subject" name="user_subject" />
-            <input style={{ backgroundColor: darkMode && "#333" }} type="text" placeholder="Email" name="user_email" />
-            <textarea style={{ backgroundColor: darkMode && "#333" }} rows="5" placeholder="Message" name="message" />
+            <input style={{ backgroundColor: darkMode && "#333", color: darkMode && "#fff" }} type="text" placeholder="Name" name="user_name" />
+            <input style={{ backgroundColor: darkMode && "#333", color: darkMode && "#fff" }} type="text" placeholder="Subject" name="user_subject" />
+            <input style={{ backgroundColor: darkMode && "#333", color: darkMode && "#fff" }} type="text" placeholder="Email" name="user_email" />
+            <textarea style={{ backgroundColor: darkMode && "#333", color: darkMode && "#fff" }} rows="5" placeholder="Message" name="message" />
             <button>Submit</button>
             {done && "Thanks you..."}
           </form>
