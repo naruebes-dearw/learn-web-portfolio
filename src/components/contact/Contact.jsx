@@ -15,6 +15,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     emailjs.sendForm(
       'service_bevcokc',
       'template_z4fjgze',
@@ -27,6 +28,8 @@ const Contact = () => {
       }, (error) => {
         console.log(error.text);
       });
+
+    document.getElementById('form').reset();
   }
   return (
     <div className="c">
@@ -59,13 +62,29 @@ const Contact = () => {
           <p className="c-desc">
             <b>What's your story</b> Get in touch. Always available for freelancing if the right project comes along. me.
           </p>
-          <form ref={formRef} onSubmit={handleSubmit}>
-            <input style={{ backgroundColor: darkMode && "#333", color: darkMode && "#fff" }} type="text" placeholder="Name" name="user_name" />
-            <input style={{ backgroundColor: darkMode && "#333", color: darkMode && "#fff" }} type="text" placeholder="Subject" name="user_subject" />
-            <input style={{ backgroundColor: darkMode && "#333", color: darkMode && "#fff" }} type="text" placeholder="Email" name="user_email" />
-            <textarea style={{ backgroundColor: darkMode && "#333", color: darkMode && "#fff" }} rows="5" placeholder="Message" name="message" />
+          <form ref={formRef} onSubmit={handleSubmit} id="form">
+            <input style={{ backgroundColor: darkMode && "#333", color: darkMode && "#fff" }}
+              type="text"
+              placeholder="Name"
+              name="user_name"
+            />
+            <input style={{ backgroundColor: darkMode && "#333", color: darkMode && "#fff" }}
+              type="text" placeholder="Subject" name="user_subject"
+            />
+            <input style={{ backgroundColor: darkMode && "#333", color: darkMode && "#fff" }}
+              type="text"
+              placeholder="Email"
+              name="user_email"
+            />
+            <textarea style={{ backgroundColor: darkMode && "#333", color: darkMode && "#fff" }}
+              rows="5"
+              placeholder="Message"
+              name="message"
+            />
             <button>Submit</button>
-            {done && "Thanks you..."}
+            <p className="c-submit-alert">
+              {done && "Thanks you..."}
+            </p>
           </form>
         </div>
       </div>
