@@ -22,7 +22,7 @@ const About = () => {
         <p className="a-desc">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehende.
         </p>
-        <d className="a-award">
+        <div className="a-award">
           <img src={Award} alt="" className="a-award-img" />
           <div className="a-award-text">
             <h4 className="a-award-title">International Design Award 2021</h4>
@@ -30,7 +30,7 @@ const About = () => {
               labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
             </p>
           </div>
-        </d>
+        </div>
       </div>
     </div >
   )
